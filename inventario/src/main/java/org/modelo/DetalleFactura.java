@@ -1,0 +1,37 @@
+package org.modelo;
+
+public class DetalleFactura {
+    private int id;
+    private int facturaId;
+    private int productoId;
+    private String nombreProducto;
+    private int cantidad;
+    private double precioUnitario;
+    private double subtotal;
+
+    public DetalleFactura() {}
+
+    public DetalleFactura(int facturaId, int productoId, String nombreProducto, int cantidad, double precioUnitario) {
+        this.facturaId = facturaId;
+        this.productoId = productoId;
+        this.nombreProducto = nombreProducto;
+        this.cantidad = cantidad;
+        this.precioUnitario = precioUnitario;
+        this.subtotal = cantidad * precioUnitario;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public int getFacturaId() { return facturaId; }
+    public void setFacturaId(int facturaId) { this.facturaId = facturaId; }
+    public int getProductoId() { return productoId; }
+    public void setProductoId(int productoId) { this.productoId = productoId; }
+    public String getNombreProducto() { return nombreProducto; }
+    public void setNombreProducto(String nombreProducto) { this.nombreProducto = nombreProducto; }
+    public int getCantidad() { return cantidad; }
+    public void setCantidad(int cantidad) { this.cantidad = cantidad; }
+    public double getPrecioUnitario() { return precioUnitario; }
+    public void setPrecioUnitario(double precioUnitario) { this.precioUnitario = precioUnitario; }
+    public double getSubtotal() { return subtotal; }
+    public void setSubtotal(double subtotal) { this.subtotal = subtotal; }
+}
